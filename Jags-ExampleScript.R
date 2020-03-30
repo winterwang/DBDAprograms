@@ -26,9 +26,9 @@ dataList = list(    # Put the information into a list.
 modelString = "
 model {
   for ( i in 1:Ntotal ) {
-    y[i] ~ dbern( theta )
+    y[i] ~ dbern( theta )   # likelihood
   }
-  theta ~ dbeta( 1 , 1 )
+  theta ~ dbeta( 1 , 1 )    # prior 
 }
 " # close quote for modelString
 writeLines( modelString , con="TEMPmodel.txt" )
